@@ -19,60 +19,58 @@ class EcgreportItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: 11.h,
-        vertical: 13.v,
-      ),
-      decoration: AppDecoration.outlineBlueGray.copyWith(
-        borderRadius: BorderRadiusStyle.roundedBorder5,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CustomImageView(
-            svgPath: ImageConstant.imgBifilepdf,
-            height: 24.adaptSize,
-            width: 24.adaptSize,
-            margin: EdgeInsets.symmetric(vertical: 3.v),
+          padding: EdgeInsets.symmetric(vertical: 12.v, horizontal: 12.h),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(
+              5.h,
+            ),
+            border: Border.all(
+              color: appTheme.blueGray100,
+              width: 1.h,
+            ),
           ),
-          Padding(
-            padding: EdgeInsets.only(left: 8.h),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Align(
-                  alignment: Alignment.center,
-                  child: Obx(
-                    () => Text(
-                      ecgreportItemModelObj.ecgText!.value,
-                      overflow: TextOverflow.ellipsis,
+          child: Row(
+            children: [
+              CustomImageView(
+                svgPath: ImageConstant.imgBifilepdf,
+                height: 24.adaptSize,
+                width: 24.adaptSize,
+                margin: EdgeInsets.only(
+                  top: 2.v,
+                  bottom: 3.v,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 8.h),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "lbl_ecg_report".tr,
+                        style: theme.textTheme.bodySmall,
+                      ),
+                    ),
+                    Text(
+                      "lbl_4_oct_2023".tr,
                       style: theme.textTheme.bodySmall,
                     ),
-                  ),
+                  ],
                 ),
-                Obx(
-                  () => Text(
-                    ecgreportItemModelObj.dateText!.value,
-                    overflow: TextOverflow.ellipsis,
-                    style: theme.textTheme.bodySmall,
-                  ),
+              ),
+              Spacer(),
+              CustomImageView(
+                svgPath: ImageConstant.imgArrowright,
+                height: 20.adaptSize,
+                width: 20.adaptSize,
+                margin: EdgeInsets.only(
+                  top: 4.v,
+                  bottom: 5.v,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
-          Spacer(),
-          CustomImageView(
-            svgPath: ImageConstant.imgSearchPrimary20x20,
-            height: 20.adaptSize,
-            width: 20.adaptSize,
-            margin: EdgeInsets.only(
-              top: 6.v,
-              right: 1.h,
-              bottom: 4.v,
-            ),
-          ),
-        ],
-      ),
-    );
+        );
   }
 }

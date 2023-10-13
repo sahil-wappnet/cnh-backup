@@ -49,7 +49,7 @@ class CaregiverDetailsPage extends StatelessWidget {
                   width: mediaQueryData.size.width,
                   child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                     CustomImageView(
-                                  imagePath: ImageConstant.imgEllipse187,
+                                  imagePath: ImageConstant.placeholderImage,
                                   height: 60.adaptSize,
                                   width: 60.adaptSize,
                                   radius: BorderRadius.circular(30.h)),

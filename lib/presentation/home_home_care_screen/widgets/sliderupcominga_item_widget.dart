@@ -44,7 +44,7 @@ class SliderupcomingaItemWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CustomImageView(
-                      imagePath: ImageConstant.imgEllipse1810,
+                      imagePath: ImageConstant.placeholderImage,
                       height: 34.adaptSize,
                       width: 34.adaptSize,
                       radius: BorderRadius.circular(

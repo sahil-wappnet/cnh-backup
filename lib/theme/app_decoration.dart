@@ -18,6 +18,7 @@ class AppDecoration {
   static BoxDecoration get fillWhiteA700 => BoxDecoration(
         color: appTheme.whiteA700.withOpacity(0.95),
       );
+      
 
   // Gradient decorations
   static BoxDecoration get gradientSecondaryContainerToIndigoA => BoxDecoration(
@@ -73,6 +74,9 @@ class BorderRadiusStyle {
       );
   static BorderRadius get circleBorder30 => BorderRadius.circular(
         30.h,
+      );
+  static BorderRadius get roundedBorder9 => BorderRadius.circular(
+        9.h,
       );
 
   // Custom borders

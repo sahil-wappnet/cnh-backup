@@ -267,6 +267,9 @@ class HomeMedicationNewPage extends StatelessWidget {
                   ),
                 ),
                 CustomElevatedButton(
+                  onTap: (){
+                    Get.toNamed(AppRoutes.myCartScreen);
+                  },
                   text: "lbl_view_cart".tr,
                   margin: EdgeInsets.only(
                     top: 20.v,

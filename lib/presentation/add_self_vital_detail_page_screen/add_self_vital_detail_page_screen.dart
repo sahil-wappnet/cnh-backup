@@ -57,7 +57,10 @@ class AddSelfVitalDetailPageScreen
                           hintStyle: CustomTextStyles.bodyMediumGray50001,
                           textInputAction: TextInputAction.done),
                       SizedBox(height: 20.v),
-                      CustomElevatedButton(text: "lbl_save".tr)
+                      CustomElevatedButton(text: "lbl_save".tr,onTap: () {
+                        // update and go back
+                        Get.back();
+                      },)
                     ])),
             ));
   }

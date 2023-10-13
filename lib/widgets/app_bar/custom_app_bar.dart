@@ -64,7 +64,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       case Style.bgFill:
         return Container(
           height: 1.v,
-          width: 328.h,
+          width: 350.h,
           margin: EdgeInsets.fromLTRB(16.h, 46.5.v, 16.h, 8.5.v),
           decoration: BoxDecoration(
             color: appTheme.blueGray100,

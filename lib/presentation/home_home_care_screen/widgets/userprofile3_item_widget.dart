@@ -25,7 +25,7 @@ class Userprofile3ItemWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomImageView(
-            imagePath: ImageConstant.imgEllipse1811,
+            imagePath: ImageConstant.placeholderImage,
             height: 34.adaptSize,
             width: 34.adaptSize,
             radius: BorderRadius.circular(

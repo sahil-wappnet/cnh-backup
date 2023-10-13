@@ -28,7 +28,7 @@ class MessageScreen extends GetWidget<MessageController> {
                               onTapArrowleftone();
                             }),
                         AppbarCircleimage(
-                            imagePath: ImageConstant.imgEllipse1824x24,
+                            imagePath: ImageConstant.placeholderImage,
                             margin: EdgeInsets.only(left: 15.h)),
                         AppbarSubtitle(
                             text: "lbl_dr_khan2".tr,

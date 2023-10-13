@@ -41,7 +41,7 @@ class BookedAppointmentScreen extends GetWidget<BookedAppointmentController> {
                   children: [
                     Row(children: [
                       CustomImageView(
-                          imagePath: ImageConstant.imgEllipse260x60,
+                          imagePath: ImageConstant.placeholderImage,
                           height: 60.adaptSize,
                           width: 60.adaptSize,
                           radius: BorderRadius.circular(30.h)),

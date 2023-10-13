@@ -1,11 +1,11 @@
+import 'package:sahil_s_application2/widgets/app_bar/appbar_title.dart';
+
 import 'controller/add_new_family_member_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:sahil_s_application2/core/app_export.dart';
 import 'package:sahil_s_application2/core/utils/validation_functions.dart';
 import 'package:sahil_s_application2/widgets/app_bar/appbar_image.dart';
-import 'package:sahil_s_application2/widgets/app_bar/appbar_subtitle.dart';
 import 'package:sahil_s_application2/widgets/app_bar/custom_app_bar.dart';
-import 'package:sahil_s_application2/widgets/custom_bottom_bar.dart';
 import 'package:sahil_s_application2/widgets/custom_drop_down.dart';
 import 'package:sahil_s_application2/widgets/custom_elevated_button.dart';
 import 'package:sahil_s_application2/widgets/custom_text_form_field.dart';
@@ -23,15 +23,14 @@ class AddNewFamilyMemberScreen extends GetWidget<AddNewFamilyMemberController> {
         child: Scaffold(
             resizeToAvoidBottomInset: false,
             appBar: CustomAppBar(
-                leadingWidth: 40.h,
+                leadingWidth: 25.h,
                 leading: AppbarImage(
                     svgPath: ImageConstant.imgArrowleft,
-                    margin:
-                        EdgeInsets.only(left: 16.h, top: 16.v, bottom: 16.v),
+                   
                     onTap: () {
                       onTapArrowleftone();
                     }),
-                title: AppbarSubtitle(
+                title: AppbarTitle(
                     text: "msg_add_new_family_member".tr,
                     margin: EdgeInsets.only(left: 6.h))),
             body: Form(
@@ -86,7 +85,7 @@ class AddNewFamilyMemberScreen extends GetWidget<AddNewFamilyMemberController> {
                               hintText: "lbl_female".tr,
                               hintStyle: CustomTextStyles.bodyMediumGray50001,
                               items: controller.addNewFamilyMemberModelObj.value
-                                  .dropdownItemList!.value,
+                                  .dropdownItemList.value,
                               onChanged: (value) {
                                 controller.onSelected(value);
                               }),
@@ -108,7 +107,7 @@ class AddNewFamilyMemberScreen extends GetWidget<AddNewFamilyMemberController> {
                               margin: EdgeInsets.only(top: 9.v, right: 9.h),
                               hintText: "msg_who_is_this_to_you".tr,
                               items: controller.addNewFamilyMemberModelObj.value
-                                  .dropdownItemList1!.value,
+                                  .dropdownItemList1.value,
                               onChanged: (value) {
                                 controller.onSelected1(value);
                               }),
@@ -128,7 +127,7 @@ class AddNewFamilyMemberScreen extends GetWidget<AddNewFamilyMemberController> {
                                 }
                                 return null;
                               }),
-                          Spacer(),
+                          SizedBox(height: 20.v,),
                           Padding(
                               padding:
                                   EdgeInsets.only(right: 1.h, bottom: 22.v),
@@ -138,18 +137,17 @@ class AddNewFamilyMemberScreen extends GetWidget<AddNewFamilyMemberController> {
                                     Expanded(
                                         child: CustomElevatedButton(
                                             text: "lbl_cancel".tr,
-                                            margin:
-                                                EdgeInsets.only(right: 6.h))),
+                                            onTap: onTapArrowleftone,
+                                            )),
+                                    SizedBox(width: 5.v,),
                                     Expanded(
                                         child: CustomElevatedButton(
                                             text: "lbl_save".tr,
-                                            margin: EdgeInsets.only(left: 6.h)))
+                                            onTap: onTapArrowleftone,
+                                            ))
                                   ]))
                         ]))),
-            bottomNavigationBar:
-                CustomBottomBar(
-                  // onChanged: (BottomBarEnum type) {}
-                  )));
+            ));
   }
 
   /// Navigates to the previous screen.

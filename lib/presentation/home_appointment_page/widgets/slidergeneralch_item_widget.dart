@@ -58,7 +58,7 @@ class SlidergeneralchItemWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomImageView(
-                  imagePath: ImageConstant.imgEllipse186,
+                  imagePath: ImageConstant.placeholderImage,
                   height: 34.adaptSize,
                   width: 34.adaptSize,
                   radius: BorderRadius.circular(

@@ -63,7 +63,7 @@ class ForgetPasswordScreen extends GetWidget<ForgetPasswordController> {
                           SizedBox(height: 36.v),
                           CustomElevatedButton(text: "lbl_continue".tr,onTap: (){
                             Get.toNamed(
-                        AppRoutes.resetPasswordScreen,
+                        AppRoutes.verificationScreen,
                       );
                           },),
                           SizedBox(height: 36.v)

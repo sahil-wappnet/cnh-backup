@@ -30,7 +30,7 @@ class HomeHealthTabContainerScreen
         appBar: CustomAppBar(
           leadingWidth: 66.h,
           leading: AppbarCircleimage1(
-            imagePath: ImageConstant.imgEllipse1,
+            imagePath: ImageConstant.placeholderImage,
             margin: EdgeInsets.only(
               left: 16.h,
               top: 3.v,

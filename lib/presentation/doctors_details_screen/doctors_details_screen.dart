@@ -40,7 +40,7 @@ class DoctorsDetailsScreen extends GetWidget<DoctorsDetailsController> {
             Row(
               children: [
                 CustomImageView(
-                    imagePath: ImageConstant.imgEllipse260x60,
+                    imagePath: ImageConstant.placeholderImage,
                     height: 60.adaptSize,
                     width: 60.adaptSize,
                     radius: BorderRadius.circular(30.h)),
@@ -190,7 +190,7 @@ class DoctorsDetailsScreen extends GetWidget<DoctorsDetailsController> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CustomImageView(
-                          imagePath: ImageConstant.imgEllipse184,
+                          imagePath: ImageConstant.placeholderImage,
                           height: 34.adaptSize,
                           width: 34.adaptSize,
                           radius: BorderRadius.circular(17.h)),
@@ -224,7 +224,7 @@ class DoctorsDetailsScreen extends GetWidget<DoctorsDetailsController> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CustomImageView(
-                          imagePath: ImageConstant.imgEllipse185,
+                          imagePath: ImageConstant.placeholderImage,
                           height: 34.adaptSize,
                           width: 34.adaptSize,
                           radius: BorderRadius.circular(17.h),

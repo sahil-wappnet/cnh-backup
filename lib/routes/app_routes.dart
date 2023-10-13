@@ -2,7 +2,6 @@ import 'package:sahil_s_application2/presentation/caregiver_details_container_sc
 import 'package:sahil_s_application2/presentation/caregiver_details_container_screen/binding/caregiver_details_container_binding.dart';
 import 'package:sahil_s_application2/presentation/book_appointment_one_screen/book_appointment_one_screen.dart';
 import 'package:sahil_s_application2/presentation/book_appointment_one_screen/binding/book_appointment_one_binding.dart';
-import 'package:sahil_s_application2/presentation/caregiver_details_page/caregiver_details_page.dart';
 import 'package:sahil_s_application2/presentation/manage_family_members_screen/manage_family_members_screen.dart';
 import 'package:sahil_s_application2/presentation/manage_family_members_screen/binding/manage_family_members_binding.dart';
 import 'package:sahil_s_application2/presentation/edit_family_member_profile_screen/edit_family_member_profile_screen.dart';
@@ -87,6 +86,12 @@ import 'package:sahil_s_application2/presentation/app_navigation_screen/app_navi
 import 'package:sahil_s_application2/presentation/app_navigation_screen/binding/app_navigation_binding.dart';
 import 'package:get/get.dart';
 
+import '../presentation/all_health_record_screen/all_health_record_screen.dart';
+import '../presentation/all_health_record_screen/binding/all_health_record_binding.dart';
+import '../presentation/lab_tests_and_doctor_consultant_screen/binding/lab_tests_and_doctor_consultant_binding.dart';
+import '../presentation/lab_tests_and_doctor_consultant_screen/lab_tests_and_doctor_consultant_screen.dart';
+import '../presentation/medicine_orders_screen/binding/medicine_orders_binding.dart';
+import '../presentation/medicine_orders_screen/medicine_orders_screen.dart';
 import '../presentation/payment_success_screen/binding/payment_success_binding.dart';
 import '../presentation/payment_success_screen/payment_success_screen.dart';
 
@@ -123,6 +128,8 @@ class AppRoutes {
 
   static const String addAppointmentPageScreen = '/add_appointment_page_screen';
 
+  static const String medicineOrdersScreen = '/medicine_orders_screen';
+  
   static const String bookedAppointmentScreen = '/booked_appointment_screen';
 
   static const String chatsPage = '/chats_page';
@@ -135,6 +142,11 @@ class AppRoutes {
 
   static const String queueMoveInQueueTabContainerScreen =
       '/queue_move_in_queue_tab_container_screen';
+
+   static const String labTestsAndDoctorConsultantScreen =
+      '/lab_tests_and_doctor_consultant_screen';
+
+  static const String allHealthRecordScreen = '/all_health_record_screen';
 
   static const String queueNewQueuePage = '/queue_new_queue_page';
 
@@ -271,6 +283,13 @@ class AppRoutes {
       page: () => NotificationsTabContainerScreen(),
       bindings: [
         NotificationsTabContainerBinding(),
+      ],
+    ),
+    GetPage(
+      name: medicineOrdersScreen,
+      page: () => MedicineOrdersScreen(),
+      bindings: [
+        MedicineOrdersBinding(),
       ],
     ),
     GetPage(
@@ -418,6 +437,20 @@ class AppRoutes {
       page: () => DoctorsDetailsScreen(),
       bindings: [
         DoctorsDetailsBinding(),
+      ],
+    ),
+    GetPage(
+      name: labTestsAndDoctorConsultantScreen,
+      page: () => LabTestsAndDoctorConsultantScreen(),
+      bindings: [
+        LabTestsAndDoctorConsultantBinding(),
+      ],
+    ),
+    GetPage(
+      name: allHealthRecordScreen,
+      page: () => AllHealthRecordScreen(),
+      bindings: [
+        AllHealthRecordBinding(),
       ],
     ),
     GetPage(

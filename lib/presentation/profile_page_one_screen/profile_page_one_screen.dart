@@ -66,7 +66,7 @@ class ProfilePageOneScreen extends GetWidget<ProfilePageOneController> {
                                             children: [
                                               CustomImageView(
                                                   imagePath: ImageConstant
-                                                      .imgEllipse21,
+                                                      .placeholderImage,
                                                   height: 60.adaptSize,
                                                   width: 60.adaptSize,
                                                   radius: BorderRadius.circular(
@@ -152,7 +152,7 @@ class ProfilePageOneScreen extends GetWidget<ProfilePageOneController> {
                                             ])),
                                     SizedBox(height: 16.v),
                                     CustomImageView(
-                                        imagePath: ImageConstant.imgEllipse181,
+                                        imagePath: ImageConstant.placeholderImage,
                                         height: 34.adaptSize,
                                         width: 34.adaptSize,
                                         radius: BorderRadius.circular(17.h)),

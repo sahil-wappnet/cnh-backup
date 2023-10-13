@@ -6,7 +6,6 @@ class ImageConstant {
   static String imgPixelarticonsarchive =
       '$imagePath/img_pixelarticonsarchive.svg';
 
-  static String imgEllipse182 = '$imagePath/img_ellipse18_2.png';
 
   static String imgRieditline = '$imagePath/img_rieditline.svg';
 
@@ -19,13 +18,7 @@ class ImageConstant {
   // Payment Success images
   static String imgCheckmarkPrimary = '$imagePath/img_checkmark_primary.svg';
 
-  // Chats images
-  static String imgEllipse183 = '$imagePath/img_ellipse18_3.png';
 
-  static String imgEllipse184 = '$imagePath/img_ellipse18_4.png';
-
-  // Message Screen images
-  static String imgEllipse1824x24 = '$imagePath/img_ellipse18_24x24.png';
 
   static String imgCarbonvideo = '$imagePath/img_carbonvideo.svg';
 
@@ -73,9 +66,7 @@ class ImageConstant {
   // Home Page images
   static String imgGroup10 = '$imagePath/img_group10.png';
 
-  static String imgEllipse188 = '$imagePath/img_ellipse18_8.png';
-
-  static String imgEllipse189 = '$imagePath/img_ellipse18_9.png';
+ 
 
   // Home Page - Tab Container images
   static String imgArrowrightPrimary = '$imagePath/img_arrowright_primary.svg';
@@ -140,17 +131,7 @@ class ImageConstant {
 
   static String imgMapphysiotherapist = '$imagePath/img_mapphysiotherapist.svg';
 
-  static String imgEllipse1810 = '$imagePath/img_ellipse18_10.png';
-
-  static String imgEllipse1811 = '$imagePath/img_ellipse18_11.png';
-
-  static String imgEllipse1812 = '$imagePath/img_ellipse18_12.png';
-
-  static String imgEllipse1813 = '$imagePath/img_ellipse18_13.png';
-
-  static String imgEllipse1814 = '$imagePath/img_ellipse18_14.png';
-
-  static String imgEllipse1815 = '$imagePath/img_ellipse18_15.png';
+  
 
   // Common images
   static String imgArrowleft = '$imagePath/img_arrowleft.svg';
@@ -158,7 +139,6 @@ class ImageConstant {
   static String imgMdibellnotificationoutline =
       '$imagePath/img_mdibellnotificationoutline.svg';
 
-  static String imgEllipse2 = '$imagePath/img_ellipse2.png';
 
   static String imgStar = '$imagePath/img_star.svg';
 
@@ -171,11 +151,9 @@ class ImageConstant {
 
   static String imgRicalendarline = '$imagePath/img_ricalendarline.svg';
 
-  static String imgEllipse18 = '$imagePath/img_ellipse18.png';
 
   static String imgStarPrimary = '$imagePath/img_star_primary.svg';
 
-  static String imgEllipse1834x34 = '$imagePath/img_ellipse18_34x34.png';
 
   static String imgMingcutecalendarline =
       '$imagePath/img_mingcutecalendarline.svg';
@@ -184,7 +162,6 @@ class ImageConstant {
 
   static String imgIconamoonprofile = '$imagePath/img_iconamoonprofile.svg';
 
-  static String imgEllipse260x60 = '$imagePath/img_ellipse2_60x60.png';
 
   static String imgIcons = '$imagePath/img_icons.svg';
 
@@ -195,9 +172,9 @@ class ImageConstant {
 
   static String imgSearch = '$imagePath/img_search.svg';
 
-  static String imgEllipse21 = '$imagePath/img_ellipse2_1.png';
+  static String placeholderImage = '$imagePath/placeholder_image.png';
 
-  static String imgEllipse181 = '$imagePath/img_ellipse18_1.png';
+
 
   static String imgTablermedicinesyrup =
       '$imagePath/img_tablermedicinesyrup.svg';
@@ -226,14 +203,6 @@ class ImageConstant {
   static String imgSearchPrimary = '$imagePath/img_search_primary.svg';
 
   static String imgPheye = '$imagePath/img_pheye.svg';
-
-  static String imgEllipse185 = '$imagePath/img_ellipse18_5.png';
-
-  static String imgEllipse186 = '$imagePath/img_ellipse18_6.png';
-
-  static String imgEllipse187 = '$imagePath/img_ellipse18_7.png';
-
-  static String imgEllipse1 = '$imagePath/img_ellipse1.png';
 
   static String imgMifilter = '$imagePath/img_mifilter.svg';
 

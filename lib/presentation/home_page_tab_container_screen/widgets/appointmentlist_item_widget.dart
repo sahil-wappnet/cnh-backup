@@ -30,7 +30,7 @@ class AppointmentlistItemWidget extends StatelessWidget {
           children: [
             Container(
               padding: EdgeInsets.symmetric(
-                horizontal: 15.v,
+                horizontal: 12.v,
                 vertical: 10.v,
               ),
               decoration: AppDecoration.outlineBlueGray.copyWith(
