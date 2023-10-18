@@ -35,22 +35,22 @@ class SignInScreen extends GetWidget<SignInController> {
             children: [
               Text(
                 "lbl_sign_in".tr,
-                style: theme.textTheme.bodyLarge,
+                style: theme.textTheme.bodyLarge?.copyWith(fontSize: 16),
               ),
               SizedBox(height: 32.v),
               SizedBox(
-                width: 88.h,
+                width: 95.h,
                 child: Text(
                   "msg_welcome_back_let_s".tr,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: theme.textTheme.bodyMedium,
+                  style: theme.textTheme.bodyMedium?.copyWith(fontSize: 13),
                 ),
               ),
               SizedBox(height: 31.v),
               Text(
                 "lbl_mobile_number".tr,
-                style: theme.textTheme.bodySmall,
+                style: theme.textTheme.bodySmall?.copyWith(fontSize: 12),
               ),
               Padding(
                 padding: EdgeInsets.only(
@@ -70,7 +70,7 @@ class SignInScreen extends GetWidget<SignInController> {
               SizedBox(height: 19.v),
               Text(
                 "lbl_password".tr,
-                style: theme.textTheme.bodySmall,
+                style: theme.textTheme.bodySmall?.copyWith(fontSize: 12),
               ),
               Obx(
                 () => CustomTextFormField(
@@ -114,41 +114,39 @@ class SignInScreen extends GetWidget<SignInController> {
                   ),
                 ),
               ),
-              Align(
-                alignment: Alignment.centerRight,
-                child: Padding(
-                  padding: EdgeInsets.only(
-                    top: 6.v,
-                    right: 8.h,
-                  ),
-                  child: GestureDetector(
-                    onTap: (){
-                      Get.toNamed(
+              Padding(
+                padding: EdgeInsets.only(
+                  top: 12.v,
+                  left: 225.h,
+                ),
+                child: GestureDetector(
+                  onTap: () {
+                    Get.toNamed(
                       AppRoutes.forgetPasswordScreen,
                     );
-                      
-                    },
-                    child: Text(
-                      "msg_forget_password".tr,
-                      style: CustomTextStyles.bodyMediumPrimary,
-                    ),
+                  },
+                  child: Text(
+                    "msg_forget_password".tr,
+                    style: CustomTextStyles.bodyMediumPrimary,
                   ),
                 ),
               ),
-              SizedBox(height: 10.v),
+              SizedBox(height: 55.v),
               CustomElevatedButton(
+                height: 36.v,
+                width: 324.h,
                 text: "lbl_sign_in".tr,
                 onTap: () {
-                    Get.offNamed(
-                      AppRoutes.homePageTabContainerScreen,
-                    );
-                  },
+                  Get.offNamed(
+                    AppRoutes.homePageTabContainerScreen,
+                  );
+                },
               ),
               SizedBox(height: 16.v),
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 Text(
                   "msg_don_t_have_an_account".tr,
-                  style: CustomTextStyles.bodyMediumPrimary,
+                  style: CustomTextStyles.bodyMediumBluegray9001,
                 ),
                 GestureDetector(
                   onTap: () {

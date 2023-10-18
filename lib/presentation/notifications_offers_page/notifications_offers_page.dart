@@ -5,12 +5,9 @@ import 'package:sahil_s_application2/core/app_export.dart';
 import 'package:sahil_s_application2/widgets/custom_icon_button.dart';
 
 class NotificationsOffersPage extends StatelessWidget {
-  NotificationsOffersPage({Key? key})
-      : super(
-          key: key,
-        );
+  NotificationsOffersPage({Key? key});
 
-  NotificationsOffersController controller =
+  final NotificationsOffersController controller =
       Get.put(NotificationsOffersController(NotificationsOffersModel().obs));
 
   @override
@@ -54,15 +51,13 @@ class NotificationsOffersPage extends StatelessWidget {
                                 padding: EdgeInsets.all(5.h),
                                 decoration: IconButtonStyleHelper.fillPrimary,
                                 child: CustomImageView(
-                                  svgPath:
-                                      ImageConstant.imgIcoutlinelocaloffer,
+                                  svgPath: ImageConstant.imgIcoutlinelocaloffer,
                                 ),
                               ),
                               Padding(
                                 padding: EdgeInsets.only(left: 11.h),
                                 child: Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       "lbl_oct_offer".tr,
@@ -92,8 +87,7 @@ class NotificationsOffersPage extends StatelessWidget {
                                 padding: EdgeInsets.all(5.h),
                                 decoration: IconButtonStyleHelper.fillPrimary,
                                 child: CustomImageView(
-                                  svgPath:
-                                      ImageConstant.imgIcoutlinelocaloffer,
+                                  svgPath: ImageConstant.imgIcoutlinelocaloffer,
                                 ),
                               ),
                               Expanded(
@@ -134,8 +128,7 @@ class NotificationsOffersPage extends StatelessWidget {
                             child: Row(
                               children: [
                                 CustomImageView(
-                                  svgPath:
-                                      ImageConstant.imgIcoutlinelocaloffer,
+                                  svgPath: ImageConstant.imgIcoutlinelocaloffer,
                                   height: 24.adaptSize,
                                   width: 24.adaptSize,
                                   margin: EdgeInsets.symmetric(vertical: 4.v),

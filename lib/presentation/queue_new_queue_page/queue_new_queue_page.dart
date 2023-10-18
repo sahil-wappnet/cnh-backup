@@ -6,12 +6,9 @@ import 'package:sahil_s_application2/widgets/custom_elevated_button.dart';
 import 'package:sahil_s_application2/widgets/custom_text_form_field.dart';
 
 class QueueNewQueuePage extends StatelessWidget {
-  QueueNewQueuePage({Key? key})
-      : super(
-          key: key,
-        );
+  QueueNewQueuePage({Key? key});
 
-  QueueNewQueueController controller =
+  final QueueNewQueueController controller =
       Get.put(QueueNewQueueController(QueueNewQueueModel().obs));
 
   @override

@@ -4,12 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:sahil_s_application2/core/app_export.dart';
 
 class HomeHealthPage extends StatelessWidget {
-  HomeHealthPage({Key? key})
-      : super(
-          key: key,
-        );
+  HomeHealthPage({Key? key});
 
-  HomeHealthController controller =
+  final HomeHealthController controller =
       Get.put(HomeHealthController(HomeHealthModel().obs));
 
   @override

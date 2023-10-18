@@ -21,11 +21,9 @@ class ForgetPasswordScreen extends GetWidget<ForgetPasswordController> {
         child: Scaffold(
             resizeToAvoidBottomInset: false,
             appBar: CustomAppBar(
-                leadingWidth: 25.h,
+                leadingWidth: 30.h,
                 leading: AppbarImage(
                     svgPath: ImageConstant.imgArrowleft,
-                    margin:
-                        EdgeInsets.only(top: 16.v, bottom: 16.v),
                     onTap: () {
                       onTapArrowleftone();
                     }),
@@ -42,16 +40,19 @@ class ForgetPasswordScreen extends GetWidget<ForgetPasswordController> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                              width: 311.h,
+                              width: 330.h,
                               margin: EdgeInsets.only(right: 16.h),
                               child: Text("msg_enter_you_mobile".tr,
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis,
-                                  style: theme.textTheme.bodyMedium)),
-                          SizedBox(height: 20.v,),
-
+                                  style: theme.textTheme.bodyMedium
+                                      ?.copyWith(fontSize: 13))),
+                          SizedBox(
+                            height: 200.v,
+                          ),
                           Text("lbl_mobile_number".tr,
-                              style: theme.textTheme.bodySmall),
+                              style: theme.textTheme.bodySmall
+                                  ?.copyWith(fontSize: 12)),
                           Padding(
                               padding: EdgeInsets.only(top: 9.v, right: 9.h),
                               child: Obx(() => CustomPhoneNumber(
@@ -61,11 +62,16 @@ class ForgetPasswordScreen extends GetWidget<ForgetPasswordController> {
                                     controller.selectedCountry.value = country;
                                   }))),
                           SizedBox(height: 36.v),
-                          CustomElevatedButton(text: "lbl_continue".tr,onTap: (){
-                            Get.toNamed(
-                        AppRoutes.verificationScreen,
-                      );
-                          },),
+                          CustomElevatedButton(
+                            height: 36.v,
+                            width: 324.h,
+                            text: "lbl_continue".tr,
+                            onTap: () {
+                              Get.toNamed(
+                                AppRoutes.verificationScreen,
+                              );
+                            },
+                          ),
                           SizedBox(height: 36.v)
                         ])))));
   }

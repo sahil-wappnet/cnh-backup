@@ -5,16 +5,11 @@ import '../controller/my_cart_controller.dart';
 import '../models/productdetails_item_model.dart';
 
 class ProductdetailsItemWidget extends StatelessWidget {
-  ProductdetailsItemWidget(
-    this.productdetailsItemModelObj, {
-    Key? key,
-  }) : super(
-          key: key,
-        );
+  ProductdetailsItemWidget(this.productdetailsItemModelObj, {Key? key});
 
-  ProductdetailsItemModel productdetailsItemModelObj;
+  final ProductdetailsItemModel productdetailsItemModelObj;
 
-  var controller = Get.find<MyCartController>();
+  final controller = Get.find<MyCartController>();
 
   @override
   Widget build(BuildContext context) {

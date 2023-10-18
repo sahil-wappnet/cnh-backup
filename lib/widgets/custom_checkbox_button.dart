@@ -2,24 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:sahil_s_application2/core/app_export.dart';
 
 class CustomCheckboxButton extends StatelessWidget {
-  CustomCheckboxButton({
-    Key? key,
-    required this.onChange,
-    this.decoration,
-    this.alignment,
-    this.isRightCheck,
-    this.iconSize,
-    this.value,
-    this.text,
-    this.width,
-    this.margin,
-    this.padding,
-    this.textStyle,
-    this.textAlignment,
-    this.isExpandedText = false,
-  }) : super(
-          key: key,
-        );
+  CustomCheckboxButton(
+      {Key? key,
+      required this.onChange,
+      this.decoration,
+      this.alignment,
+      this.isRightCheck,
+      this.iconSize,
+      this.value,
+      this.text,
+      this.width,
+      this.margin,
+      this.padding,
+      this.textStyle,
+      this.textAlignment,
+      this.isExpandedText = false});
 
   final BoxDecoration? decoration;
 
@@ -29,7 +26,7 @@ class CustomCheckboxButton extends StatelessWidget {
 
   final double? iconSize;
 
-  bool? value;
+  late final bool? value;
 
   final Function(bool) onChange;
 

@@ -5,12 +5,9 @@ import 'package:sahil_s_application2/core/app_export.dart';
 import 'package:sahil_s_application2/widgets/custom_elevated_button.dart';
 
 class QueueMoveInQueueWithDetailPage extends StatelessWidget {
-  QueueMoveInQueueWithDetailPage({Key? key})
-      : super(
-          key: key,
-        );
+  QueueMoveInQueueWithDetailPage({Key? key});
 
-  QueueMoveInQueueWithDetailController controller = Get.put(
+  final QueueMoveInQueueWithDetailController controller = Get.put(
       QueueMoveInQueueWithDetailController(
           QueueMoveInQueueWithDetailModel().obs));
 

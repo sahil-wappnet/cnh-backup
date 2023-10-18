@@ -1,19 +1,16 @@
 import 'package:sahil_s_application2/widgets/app_bar/appbar_title.dart';
-
 import '../../widgets/app_bar/appbar_image_1.dart';
 import '../../widgets/app_bar/custom_app_bar.dart';
+import '../../widgets/custom_search_view.dart';
 import 'controller/chats_controller.dart';
 import 'models/chats_model.dart';
 import 'package:flutter/material.dart';
 import 'package:sahil_s_application2/core/app_export.dart';
 
 class ChatsPage extends StatelessWidget {
-  ChatsPage({Key? key})
-      : super(
-          key: key,
-        );
+  ChatsPage({Key? key});
 
-  ChatsController controller = Get.put(ChatsController(ChatsModel().obs));
+  final ChatsController controller = Get.put(ChatsController(ChatsModel().obs));
 
   @override
   Widget build(BuildContext context) {
@@ -37,14 +34,38 @@ class ChatsPage extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
+                  SizedBox(
+                    height: 35.v,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.h),
+                    child: CustomSearchView(
+                      controller: controller.searchController,
+                      hintText: "lbl_search".tr,
+                      prefix: Container(
+                          margin: EdgeInsets.only(left: 10.v),
+                          child: CustomImageView(
+                              svgPath: ImageConstant.imgSearchPrimary)),
+                      prefixConstraints: BoxConstraints(maxHeight: 35.v),
+                      suffix: Icon(
+                        Icons.abc,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 31.v,
+                  ),
                   Container(
                       height: 45.v,
                       width: double.maxFinite,
                       decoration: BoxDecoration(
-                          border: Border(
-                              bottom: BorderSide(
-                                  color: theme.colorScheme.onSecondaryContainer,
-                                  width: 1.h))),
+                        border: Border(
+                          bottom: BorderSide(
+                              color: theme.colorScheme.onSecondaryContainer,
+                              width: 1.h),
+                        ),
+                      ),
                       child: TabBar(
                           controller: controller.tabviewController,
                           labelPadding: EdgeInsets.zero,
@@ -78,14 +99,15 @@ class ChatsPage extends StatelessWidget {
                                         EdgeInsets.symmetric(vertical: 0.v),
                                     itemBuilder: (context, index) {
                                       return Padding(
-                                        padding: EdgeInsets.symmetric(horizontal: 7.v, vertical: 5.v),
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 7.v, vertical: 5.v),
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
                                           children: [
                                             CustomImageView(
-                                              imagePath:
-                                                  ImageConstant.placeholderImage,
+                                              imagePath: ImageConstant
+                                                  .placeholderImage,
                                               height: 50.adaptSize,
                                               width: 50.adaptSize,
                                               radius: BorderRadius.circular(
@@ -111,8 +133,8 @@ class ChatsPage extends StatelessWidget {
                                                     'lbl_okay_will_do'.tr,
                                                     overflow:
                                                         TextOverflow.ellipsis,
-                                                    style:
-                                                        theme.textTheme.bodySmall,
+                                                    style: theme
+                                                        .textTheme.bodySmall,
                                                   ),
                                                 ],
                                               ),
@@ -137,14 +159,15 @@ class ChatsPage extends StatelessWidget {
                                         EdgeInsets.symmetric(vertical: 0.v),
                                     itemBuilder: (context, index) {
                                       return Padding(
-                                        padding: EdgeInsets.symmetric(horizontal: 7.v, vertical: 5.v),
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 7.v, vertical: 5.v),
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
                                           children: [
                                             CustomImageView(
-                                              imagePath:
-                                                  ImageConstant.placeholderImage,
+                                              imagePath: ImageConstant
+                                                  .placeholderImage,
                                               height: 50.adaptSize,
                                               width: 50.adaptSize,
                                               radius: BorderRadius.circular(
@@ -170,8 +193,8 @@ class ChatsPage extends StatelessWidget {
                                                     'lbl_okay_will_do'.tr,
                                                     overflow:
                                                         TextOverflow.ellipsis,
-                                                    style:
-                                                        theme.textTheme.bodySmall,
+                                                    style: theme
+                                                        .textTheme.bodySmall,
                                                   ),
                                                 ],
                                               ),

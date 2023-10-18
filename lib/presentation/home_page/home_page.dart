@@ -1,9 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
 import '../../widgets/app_bar/appbar_circleimage_1.dart';
 import '../../widgets/app_bar/appbar_image_1.dart';
-import '../../widgets/app_bar/appbar_title.dart';
 import '../../widgets/custom_icon_button.dart';
 import '../../widgets/custom_search_view.dart';
 import '../home_health_page/home_health_page.dart';
@@ -20,12 +18,9 @@ import 'package:flutter/material.dart';
 import 'package:sahil_s_application2/core/app_export.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({Key? key})
-      : super(
-          key: key,
-        );
+  HomePage({Key? key});
 
-  HomeController controller = Get.put(HomeController(HomeModel().obs));
+  final HomeController controller = Get.put(HomeController(HomeModel().obs));
 
   @override
   Widget build(BuildContext context) {
@@ -46,13 +41,13 @@ class HomePage extends StatelessWidget {
                   leading: AppbarCircleimage1(
                     imagePath: ImageConstant.placeholderImage,
                   ),
-                  title: AppbarTitle(
-                    text: "lbl_hello_shreya".tr,
-                    margin: EdgeInsets.only(left: 10.h),
+                  title: Text(
+                    "lbl_hello_shreya".tr,
+                    style: theme.textTheme.bodyLarge?.copyWith(fontSize: 18),
                   ),
-                  subtitle: AppbarTitle(
-                    text: "lbl_shreya".tr,
-                    margin: EdgeInsets.only(left: 10.h),
+                  subtitle: Text(
+                    "lbl_shreya".tr,
+                    style: theme.textTheme.bodyLarge?.copyWith(fontSize: 18),
                   ),
                   trailing: AppbarImage1(
                     svgPath: ImageConstant.imgMdibellnotificationoutline,
@@ -166,14 +161,15 @@ class HomePage extends StatelessWidget {
                           padding: EdgeInsets.symmetric(horizontal: 10.v),
                           child: Text(
                             "lbl_services".tr,
-                            style: theme.textTheme.bodyLarge,
+                            style: theme.textTheme.bodyLarge
+                                ?.copyWith(fontSize: 16),
                           ),
                         ),
                       ),
                       SizedBox(height: 10.v),
                       Container(
                         height: 30.v,
-                        width: 393.h,
+                        width: 400.h,
                         child: TabBar(
                           controller: controller.tabviewController,
                           isScrollable: true,
@@ -190,6 +186,8 @@ class HomePage extends StatelessWidget {
                             fontWeight: FontWeight.w400,
                           ),
                           indicatorColor: theme.colorScheme.primary,
+                          indicatorPadding:
+                              EdgeInsets.symmetric(horizontal: 25.h),
                           tabs: [
                             Tab(
                               child: Text(
@@ -236,19 +234,25 @@ class HomePage extends StatelessWidget {
                                         EdgeInsets.symmetric(horizontal: 10.v),
                                     child: Row(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
+                                          MainAxisAlignment.center,
                                       children: [
                                         Text(
                                           "lbl_live_doctors".tr,
-                                          style: theme.textTheme.bodyLarge,
+                                          style: theme.textTheme.bodyLarge
+                                              ?.copyWith(fontSize: 16),
                                         ),
+                                        Spacer(),
                                         Text(
                                           "lbl_view_all".tr,
                                           style: theme.textTheme.bodyMedium!
                                               .copyWith(
-                                            color: theme.colorScheme.primary,
-                                          ),
+                                                  color:
+                                                      theme.colorScheme.primary,
+                                                  fontSize: 14),
                                         ),
+                                        SizedBox(
+                                          width: 2.h,
+                                        )
                                       ],
                                     ),
                                   ),
@@ -314,7 +318,8 @@ class HomePage extends StatelessWidget {
                                         EdgeInsets.symmetric(horizontal: 10.v),
                                     child: Text(
                                       "msg_recommended_doctors".tr,
-                                      style: theme.textTheme.bodyLarge,
+                                      style: theme.textTheme.bodyLarge
+                                          ?.copyWith(fontSize: 16),
                                     ),
                                   ),
                                   SizedBox(height: 10.v),
@@ -323,7 +328,6 @@ class HomePage extends StatelessWidget {
                                       () => ListView.separated(
                                         padding: EdgeInsets.symmetric(
                                             horizontal: 10.v),
-                                        // physics: NeverScrollableScrollPhysics(),
                                         shrinkWrap: true,
                                         separatorBuilder: (
                                           context,

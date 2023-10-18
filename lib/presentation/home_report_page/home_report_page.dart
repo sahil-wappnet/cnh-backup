@@ -8,12 +8,9 @@ import 'package:sahil_s_application2/widgets/custom_elevated_button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomeReportPage extends StatelessWidget {
-  HomeReportPage({Key? key})
-      : super(
-          key: key,
-        );
+  HomeReportPage({Key? key});
 
-  HomeReportController controller =
+  final HomeReportController controller =
       Get.put(HomeReportController(HomeReportModel().obs));
 
   @override

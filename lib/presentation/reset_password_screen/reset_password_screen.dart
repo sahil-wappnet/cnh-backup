@@ -21,11 +21,9 @@ class ResetPasswordScreen extends GetWidget<ResetPasswordController> {
         child: Scaffold(
             resizeToAvoidBottomInset: false,
             appBar: CustomAppBar(
-                leadingWidth: 40.h,
+                leadingWidth: 30.h,
                 leading: AppbarImage(
                     svgPath: ImageConstant.imgArrowleft,
-                    margin:
-                        EdgeInsets.only(left: 16.h, top: 16.v, bottom: 16.v),
                     onTap: () {
                       onTapArrowleftone();
                     }),
@@ -47,10 +45,12 @@ class ResetPasswordScreen extends GetWidget<ResetPasswordController> {
                               child: Text("msg_set_the_new_password".tr,
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis,
-                                  style: theme.textTheme.bodyMedium)),
+                                  style: theme.textTheme.bodyMedium
+                                      ?.copyWith(fontSize: 13))),
                           SizedBox(height: 22.v),
                           Text("lbl_password".tr,
-                              style: theme.textTheme.bodySmall),
+                              style: theme.textTheme.bodySmall
+                                  ?.copyWith(fontSize: 12)),
                           Obx(() => CustomTextFormField(
                               controller: controller.passwordController,
                               margin: EdgeInsets.only(top: 9.v, right: 8.h),
@@ -84,8 +84,10 @@ class ResetPasswordScreen extends GetWidget<ResetPasswordController> {
                                   left: 15.h, top: 12.v, bottom: 12.v))),
                           SizedBox(height: 23.v),
                           Text("msg_confirm_password".tr,
-                              style: theme.textTheme.bodySmall),
-                          Obx(() => CustomTextFormField(
+                              style: theme.textTheme.bodySmall
+                                  ?.copyWith(fontSize: 12)),
+                          Obx(
+                            () => CustomTextFormField(
                               controller: controller.confirmpasswordController,
                               margin: EdgeInsets.only(top: 10.v, right: 8.h),
                               hintText: "lbl".tr,
@@ -116,21 +118,24 @@ class ResetPasswordScreen extends GetWidget<ResetPasswordController> {
                               },
                               obscureText: controller.isShowPassword1.value,
                               contentPadding: EdgeInsets.only(
-                                  left: 15.h, top: 12.v, bottom: 12.v))),
+                                  left: 15.h, top: 12.v, bottom: 12.v),
+                            ),
+                          ),
                           SizedBox(height: 43.v),
-                          CustomElevatedButton(text: "lbl_continue".tr,onTap: (){
-                            Get.offNamed(
-                        AppRoutes.signInScreen,
-                      );
-                          },),
+                          CustomElevatedButton(
+                            height: 36.v,
+                            width: 324.h,
+                            text: "lbl_continue".tr,
+                            onTap: () {
+                              Get.offNamed(
+                                AppRoutes.signInScreen,
+                              );
+                            },
+                          ),
                           SizedBox(height: 5.v)
                         ])))));
   }
 
-  /// Navigates to the previous screen.
-  ///
-  /// When the action is triggered, this function uses the [Get] package to
-  /// navigate to the previous screen in the navigation stack.
   onTapArrowleftone() {
     Get.back();
   }

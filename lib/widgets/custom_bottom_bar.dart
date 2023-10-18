@@ -2,18 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:sahil_s_application2/core/app_export.dart';
 
 class CustomBottomBar extends StatelessWidget {
-  CustomBottomBar({
-    Key? key,
-    this.onChanged,
-    this.selectedIndex = 0,
-  }) : super(
-          key: key,
-        );
+  CustomBottomBar({Key? key, this.onChanged, this.selectedIndex = 0});
 
   final int selectedIndex;
   final Function(int)? onChanged;
 
-  List<BottomMenuModel> bottomMenuList = [
+  final List<BottomMenuModel> bottomMenuList = [
     BottomMenuModel(
       icon: ImageConstant.imgMingcutecalendarline,
       activeIcon: ImageConstant.imgMingcutecalendarline,
@@ -21,8 +15,10 @@ class CustomBottomBar extends StatelessWidget {
       type: BottomBarEnum.Home,
     ),
     BottomMenuModel(
-      icon: ImageConstant.imgMingcutecalendarline, // Replace with your Appointments icon
-      activeIcon: ImageConstant.imgMingcutecalendarline, // Replace with your active Appointments icon
+      icon: ImageConstant
+          .imgMingcutecalendarline, // Replace with your Appointments icon
+      activeIcon: ImageConstant
+          .imgMingcutecalendarline, // Replace with your active Appointments icon
       title: "lbl_appointments".tr,
       type: BottomBarEnum.Appointments,
     ),
@@ -45,8 +41,8 @@ class CustomBottomBar extends StatelessWidget {
     return Container(
       height: 75.v,
       decoration: BoxDecoration(
-        // color: appTheme.whiteA700,
-      ),
+          // color: appTheme.whiteA700,
+          ),
       child: BottomNavigationBar(
         backgroundColor: Colors.transparent,
         showSelectedLabels: false,
@@ -98,7 +94,6 @@ enum BottomBarEnum {
   Chats,
   Profile,
 }
-
 
 class BottomMenuModel {
   BottomMenuModel({

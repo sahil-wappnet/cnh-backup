@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:sahil_s_application2/core/app_export.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
 import '../../core/utils/validation_functions.dart';
 import '../../widgets/app_bar/appbar_image.dart';
 import '../../widgets/app_bar/appbar_image_1.dart';
@@ -22,12 +21,11 @@ class PaymentPage extends StatelessWidget {
   PaymentPage({Key? key}) : super(key: key);
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final PaymentController controller = Get.put(PaymentController(PaymentModel().obs));
+  final PaymentController controller =
+      Get.put(PaymentController(PaymentModel().obs));
 
   @override
   Widget build(BuildContext context) {
-    final mediaQueryData = MediaQuery.of(context);
-
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -53,12 +51,14 @@ class PaymentPage extends StatelessWidget {
             child: Column(
               children: [
                 _buildCardsSection(),
-                
                 Padding(
-                  padding:  EdgeInsets.symmetric(horizontal: 10.v),
-                  child: CustomElevatedButton(text: "lbl_proceed".tr, onTap: () {
-                    Get.toNamed(AppRoutes.homePageTabContainerScreen);
-                  },),
+                  padding: EdgeInsets.symmetric(horizontal: 10.v),
+                  child: CustomElevatedButton(
+                    text: "lbl_proceed".tr,
+                    onTap: () {
+                      Get.toNamed(AppRoutes.homePageTabContainerScreen);
+                    },
+                  ),
                 ),
               ],
             ),
@@ -75,7 +75,6 @@ class PaymentPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _buildCarouselSlider(),
-          
           SizedBox(height: 10.v),
           Obx(
             () => CustomCheckboxButton(
@@ -135,11 +134,14 @@ class PaymentPage extends StatelessWidget {
                       runSpacing: 25.v,
                       spacing: 25.h,
                       children: List<Widget>.generate(
-                        controller.paymentModelObj.value
-                            .chipviewgroupsiItemList.value.length,
+                        controller.paymentModelObj.value.chipviewgroupsiItemList
+                            .value.length,
                         (index) {
                           ChipviewgroupsiItemModel model = controller
-                              .paymentModelObj.value.chipviewgroupsiItemList.value[index];
+                              .paymentModelObj
+                              .value
+                              .chipviewgroupsiItemList
+                              .value[index];
                           return ChipviewgroupsiItemWidget(model);
                         },
                       ),
@@ -174,7 +176,8 @@ class PaymentPage extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("lbl_cvv".tr, style: theme.textTheme.bodySmall),
+                            Text("lbl_cvv".tr,
+                                style: theme.textTheme.bodySmall),
                             SizedBox(height: 9.v),
                             CustomTextFormField(
                               width: 145.h,
@@ -183,7 +186,9 @@ class PaymentPage extends StatelessWidget {
                               textInputAction: TextInputAction.done,
                               textInputType: TextInputType.visiblePassword,
                               validator: (value) {
-                                if (value == null || (!isValidPassword(value, isRequired: true))) {
+                                if (value == null ||
+                                    (!isValidPassword(value,
+                                        isRequired: true))) {
                                   return "Please enter a valid password";
                                 }
                                 return null;
@@ -194,8 +199,10 @@ class PaymentPage extends StatelessWidget {
                         ),
                         Container(
                           width: 131.h,
-                          margin: EdgeInsets.only(left: 30.h, top: 18.v, bottom: 14.v),
-                          child: Text("msg_the_last_3_digits".tr,
+                          margin: EdgeInsets.only(
+                              left: 30.h, top: 18.v, bottom: 14.v),
+                          child: Text(
+                            "msg_the_last_3_digits".tr,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             style: theme.textTheme.bodyMedium,
@@ -219,13 +226,18 @@ class PaymentPage extends StatelessWidget {
                   viewportFraction: 1.0,
                   enableInfiniteScroll: false,
                   scrollDirection: Axis.horizontal,
-                  onPageChanged: (index, reason,) {
+                  onPageChanged: (
+                    index,
+                    reason,
+                  ) {
                     controller.sliderIndex.value = index;
                   },
                 ),
-                itemCount: controller.paymentModelObj.value.slidercurrentbaItemList.value.length,
+                itemCount: controller
+                    .paymentModelObj.value.slidercurrentbaItemList.value.length,
                 itemBuilder: (context, index, realIndex) {
-                  SlidercurrentbaItemModel model = controller.paymentModelObj.value.slidercurrentbaItemList.value[index];
+                  SlidercurrentbaItemModel model = controller.paymentModelObj
+                      .value.slidercurrentbaItemList.value[index];
                   return SlidercurrentbaItemWidget(model);
                 },
               ),
@@ -235,6 +247,4 @@ class PaymentPage extends StatelessWidget {
       ),
     );
   }
-
-  
 }

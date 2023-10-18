@@ -5,12 +5,9 @@ import 'package:sahil_s_application2/core/app_export.dart';
 import 'package:sahil_s_application2/widgets/custom_elevated_button.dart';
 
 class HomeMedicationRefillPage extends StatelessWidget {
-  HomeMedicationRefillPage({Key? key})
-      : super(
-          key: key,
-        );
+  HomeMedicationRefillPage({Key? key});
 
-  HomeMedicationRefillController controller =
+  final HomeMedicationRefillController controller =
       Get.put(HomeMedicationRefillController(HomeMedicationRefillModel().obs));
 
   @override

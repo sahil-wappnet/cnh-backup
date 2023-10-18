@@ -2,55 +2,38 @@ import 'package:flutter/material.dart';
 import 'package:sahil_s_application2/core/app_export.dart';
 
 class CustomRadioButton extends StatelessWidget {
-  CustomRadioButton({
-    Key? key,
-    required this.onChange,
-    this.decoration,
-    this.alignment,
-    this.isRightCheck,
-    this.iconSize,
-    this.value,
-    this.groupValue,
-    this.text,
-    this.width,
-    this.margin,
-    this.padding,
-    this.textStyle,
-    this.textAlignment,
-    this.gradient,
-    this.backgroundColor,
-  }) : super(
-          key: key,
-        );
+  CustomRadioButton(
+      {Key? key,
+      required this.onChange,
+      this.decoration,
+      this.alignment,
+      this.isRightCheck,
+      this.iconSize,
+      this.value,
+      this.groupValue,
+      this.text,
+      this.width,
+      this.margin,
+      this.padding,
+      this.textStyle,
+      this.textAlignment,
+      this.gradient,
+      this.backgroundColor});
 
   final BoxDecoration? decoration;
-
   final Alignment? alignment;
-
   final bool? isRightCheck;
-
   final double? iconSize;
-
-  String? value;
-
+  final String? value;
   final String? groupValue;
-
   final Function(String) onChange;
-
   final String? text;
-
   final double? width;
-
   final EdgeInsetsGeometry? margin;
-
   final EdgeInsetsGeometry? padding;
-
   final TextStyle? textStyle;
-
   final TextAlign? textAlignment;
-
   final Gradient? gradient;
-
   final Color? backgroundColor;
 
   @override

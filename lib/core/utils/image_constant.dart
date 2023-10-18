@@ -6,7 +6,6 @@ class ImageConstant {
   static String imgPixelarticonsarchive =
       '$imagePath/img_pixelarticonsarchive.svg';
 
-
   static String imgRieditline = '$imagePath/img_rieditline.svg';
 
   // Notifications images
@@ -17,8 +16,6 @@ class ImageConstant {
 
   // Payment Success images
   static String imgCheckmarkPrimary = '$imagePath/img_checkmark_primary.svg';
-
-
 
   static String imgCarbonvideo = '$imagePath/img_carbonvideo.svg';
 
@@ -65,8 +62,6 @@ class ImageConstant {
 
   // Home Page images
   static String imgGroup10 = '$imagePath/img_group10.png';
-
- 
 
   // Home Page - Tab Container images
   static String imgArrowrightPrimary = '$imagePath/img_arrowright_primary.svg';
@@ -131,14 +126,11 @@ class ImageConstant {
 
   static String imgMapphysiotherapist = '$imagePath/img_mapphysiotherapist.svg';
 
-  
-
   // Common images
   static String imgArrowleft = '$imagePath/img_arrowleft.svg';
 
   static String imgMdibellnotificationoutline =
       '$imagePath/img_mdibellnotificationoutline.svg';
-
 
   static String imgStar = '$imagePath/img_star.svg';
 
@@ -151,9 +143,7 @@ class ImageConstant {
 
   static String imgRicalendarline = '$imagePath/img_ricalendarline.svg';
 
-
   static String imgStarPrimary = '$imagePath/img_star_primary.svg';
-
 
   static String imgMingcutecalendarline =
       '$imagePath/img_mingcutecalendarline.svg';
@@ -162,8 +152,8 @@ class ImageConstant {
 
   static String imgIconamoonprofile = '$imagePath/img_iconamoonprofile.svg';
 
-
   static String imgIcons = '$imagePath/img_icons.svg';
+  static String imgIcon = '$imagePath/img_icon.svg';
 
   static String imgIconsOnprimarycontainer =
       '$imagePath/img_icons_onprimarycontainer.svg';
@@ -173,8 +163,6 @@ class ImageConstant {
   static String imgSearch = '$imagePath/img_search.svg';
 
   static String placeholderImage = '$imagePath/placeholder_image.png';
-
-
 
   static String imgTablermedicinesyrup =
       '$imagePath/img_tablermedicinesyrup.svg';

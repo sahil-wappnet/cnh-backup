@@ -5,12 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:sahil_s_application2/core/app_export.dart';
 
 class HomeMedicationNewPage extends StatelessWidget {
-  HomeMedicationNewPage({Key? key})
-      : super(
-          key: key,
-        );
+  HomeMedicationNewPage({Key? key});
 
-  HomeMedicationNewController controller =
+  final HomeMedicationNewController controller =
       Get.put(HomeMedicationNewController(HomeMedicationNewModel().obs));
 
   @override
@@ -65,7 +62,7 @@ class HomeMedicationNewPage extends StatelessWidget {
             //             "lbl_new_medicine".tr,
             //           ),
             //         ),
-                    
+
             //       ],
             //     )),
             // Expanded(
@@ -85,9 +82,8 @@ class HomeMedicationNewPage extends StatelessWidget {
             //       ),Container(
             //         color: Colors.amber,
             //       ),
-                  
-            //     ])),
 
+            //     ])),
 
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -150,7 +146,7 @@ class HomeMedicationNewPage extends StatelessWidget {
                       CustomImageView(
                         svgPath: ImageConstant.imgArrowright,
                         height: 20.adaptSize,
-                        onTap: (){
+                        onTap: () {
                           Get.toNamed(AppRoutes.medicineDetailsScreen);
                         },
                         width: 20.adaptSize,
@@ -203,7 +199,7 @@ class HomeMedicationNewPage extends StatelessWidget {
                       CustomImageView(
                         svgPath: ImageConstant.imgArrowright,
                         height: 20.adaptSize,
-                        onTap: (){
+                        onTap: () {
                           Get.toNamed(AppRoutes.medicineDetailsScreen);
                         },
                         width: 20.adaptSize,
@@ -255,7 +251,7 @@ class HomeMedicationNewPage extends StatelessWidget {
                         svgPath: ImageConstant.imgArrowright,
                         height: 20.adaptSize,
                         width: 20.adaptSize,
-                        onTap: (){
+                        onTap: () {
                           Get.toNamed(AppRoutes.medicineDetailsScreen);
                         },
                         margin: EdgeInsets.only(
@@ -267,7 +263,7 @@ class HomeMedicationNewPage extends StatelessWidget {
                   ),
                 ),
                 CustomElevatedButton(
-                  onTap: (){
+                  onTap: () {
                     Get.toNamed(AppRoutes.myCartScreen);
                   },
                   text: "lbl_view_cart".tr,

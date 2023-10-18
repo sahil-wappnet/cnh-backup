@@ -10,12 +10,9 @@ import 'package:sahil_s_application2/widgets/custom_text_form_field.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomeAppointmentPage extends StatelessWidget {
-  HomeAppointmentPage({Key? key})
-      : super(
-          key: key,
-        );
+  HomeAppointmentPage({Key? key});
 
-  HomeAppointmentController controller =
+  final HomeAppointmentController controller =
       Get.put(HomeAppointmentController(HomeAppointmentModel().obs));
 
   @override

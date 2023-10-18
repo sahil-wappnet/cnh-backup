@@ -5,12 +5,9 @@ import 'package:sahil_s_application2/core/app_export.dart';
 import 'package:sahil_s_application2/widgets/custom_icon_button.dart';
 
 class NotificationsPage extends StatelessWidget {
-  NotificationsPage({Key? key})
-      : super(
-          key: key,
-        );
+  NotificationsPage({Key? key});
 
-  NotificationsController controller =
+  final NotificationsController controller =
       Get.put(NotificationsController(NotificationsModel().obs));
 
   @override
@@ -54,8 +51,7 @@ class NotificationsPage extends StatelessWidget {
                                   height: 34.adaptSize,
                                   width: 34.adaptSize,
                                   padding: EdgeInsets.all(5.h),
-                                  decoration:
-                                      IconButtonStyleHelper.fillPrimary,
+                                  decoration: IconButtonStyleHelper.fillPrimary,
                                   child: CustomImageView(
                                     svgPath: ImageConstant.imgMdiheartoutline,
                                   ),
@@ -97,8 +93,7 @@ class NotificationsPage extends StatelessWidget {
                                 padding: EdgeInsets.all(5.h),
                                 decoration: IconButtonStyleHelper.fillPrimary,
                                 child: CustomImageView(
-                                  svgPath:
-                                      ImageConstant.imgIcoutlinelocaloffer,
+                                  svgPath: ImageConstant.imgIcoutlinelocaloffer,
                                 ),
                               ),
                               Expanded(
@@ -139,8 +134,7 @@ class NotificationsPage extends StatelessWidget {
                             child: Row(
                               children: [
                                 CustomImageView(
-                                  svgPath:
-                                      ImageConstant.imgIconoirbirthdaycake,
+                                  svgPath: ImageConstant.imgIconoirbirthdaycake,
                                   height: 24.adaptSize,
                                   width: 24.adaptSize,
                                   margin: EdgeInsets.symmetric(vertical: 4.v),
