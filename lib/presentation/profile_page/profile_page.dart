@@ -42,8 +42,9 @@ class ProfilePage extends StatelessWidget {
                                 ),
                                 AppbarImage1(
                                   svgPath: ImageConstant.imgSearchPrimary20x20,
-                                  onTap: (){
-                                    Get.toNamed(AppRoutes.addSelfVitalDetailPageScreen);
+                                  onTap: () {
+                                    Get.toNamed(
+                                        AppRoutes.addSelfVitalDetailPageScreen);
                                   },
                                 ),
                                 SizedBox(
@@ -54,15 +55,16 @@ class ProfilePage extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                                  height: 20.v,
-                                ),
+                          height: 20.v,
+                        ),
                         Container(
                             margin: EdgeInsets.only(right: 5.h),
                             padding: EdgeInsets.symmetric(
                                 horizontal: 12.h, vertical: 14.v),
                             decoration: AppDecoration.outlineBlueGray.copyWith(
                                 borderRadius: BorderRadiusStyle.roundedBorder5),
-                            child: Row(mainAxisSize: MainAxisSize.max, children: [
+                            child:
+                                Row(mainAxisSize: MainAxisSize.max, children: [
                               CustomImageView(
                                   imagePath: ImageConstant.placeholderImage,
                                   height: 60.adaptSize,
@@ -92,47 +94,56 @@ class ProfilePage extends StatelessWidget {
                                             style: theme.textTheme.bodySmall)
                                       ]))
                             ])),
-                            
+
                         SizedBox(height: 10.v),
                         // msg_self_vital_entry
                         AppbarTitle(text: "msg_self_vital_entry".tr),
                         SizedBox(height: 10.v),
                         Row(
                           children: [
-                            Text("lbl_height".tr, style: theme.textTheme.bodyMedium),
+                            Text("lbl_height".tr,
+                                style: theme.textTheme.bodyMedium),
                             Text(": ", style: theme.textTheme.bodyMedium),
-                            Text("lbl_5_ft_2_inch".tr, style: theme.textTheme.bodyMedium),
+                            Text("lbl_5_ft_2_inch".tr,
+                                style: theme.textTheme.bodyMedium),
                           ],
-                        ),                      
+                        ),
                         SizedBox(height: 15.v),
                         Row(
                           children: [
-                            Text("lbl_weight".tr, style: theme.textTheme.bodyMedium),
+                            Text("lbl_weight".tr,
+                                style: theme.textTheme.bodyMedium),
                             Text(": ", style: theme.textTheme.bodyMedium),
-                            Text("lbl_50_kg".tr, style: theme.textTheme.bodyMedium),
+                            Text("lbl_50_kg".tr,
+                                style: theme.textTheme.bodyMedium),
                           ],
-                        ),                      
+                        ),
                         SizedBox(height: 15.v),
                         Row(
                           children: [
-                            Text("lbl_spo2".tr, style: theme.textTheme.bodyMedium),
-                            Text(": ", style: theme.textTheme.bodyMedium),                          
-                            Text("lbl_99".tr, style: theme.textTheme.bodyMedium),
+                            Text("lbl_spo2".tr,
+                                style: theme.textTheme.bodyMedium),
+                            Text(": ", style: theme.textTheme.bodyMedium),
+                            Text("lbl_99".tr,
+                                style: theme.textTheme.bodyMedium),
                           ],
-                        ),                     
+                        ),
                         Padding(
                             padding: EdgeInsets.only(top: 15.v, right: 5.h),
                             child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text("lbl_profiles_1".tr,
                                       style: theme.textTheme.bodyLarge),
                                   GestureDetector(
                                     onTap: () {
-                                      Get.toNamed(AppRoutes.manageFamilyMembersScreen);
+                                      Get.toNamed(
+                                          AppRoutes.manageFamilyMembersScreen);
                                     },
                                     child: Text("lbl_manage_add".tr,
-                                        style: CustomTextStyles.bodyMediumPrimary),
+                                        style:
+                                            CustomTextStyles.bodyMediumPrimary),
                                   )
                                 ])),
                         SizedBox(height: 16.v),
@@ -151,7 +162,8 @@ class ProfilePage extends StatelessWidget {
                                   svgPath: ImageConstant.imgTablermedicinesyrup,
                                   height: 24.adaptSize,
                                   width: 24.adaptSize,
-                                  margin: EdgeInsets.only(top: 6.v, bottom: 8.v)),
+                                  margin:
+                                      EdgeInsets.only(top: 6.v, bottom: 8.v)),
                               Padding(
                                   padding: EdgeInsets.only(left: 11.h),
                                   child: Column(
@@ -159,11 +171,12 @@ class ProfilePage extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text("lbl_medicine_orders".tr,
-                                            style: theme.textTheme.bodyLarge),
+                                            style: CustomTextStyles
+                                                .bodyLargeBluegray90018),
                                         SizedBox(height: 3.v),
                                         Text("msg_order_history_and".tr,
                                             style:
-                                                CustomTextStyles.bodyMedium14_1)
+                                                CustomTextStyles.bodyMedium14)
                                       ])),
                               Spacer(),
                               CustomImageView(
@@ -173,7 +186,8 @@ class ProfilePage extends StatelessWidget {
                                   onTap: () {
                                     Get.toNamed(AppRoutes.medicineOrdersScreen);
                                   },
-                                  margin: EdgeInsets.only(top: 8.v, bottom: 10.v))
+                                  margin:
+                                      EdgeInsets.only(top: 8.v, bottom: 10.v))
                             ]),
                         Padding(
                             padding: EdgeInsets.only(top: 12.v),
@@ -186,7 +200,8 @@ class ProfilePage extends StatelessWidget {
                                   svgPath: ImageConstant.imgLastethoscope,
                                   height: 24.adaptSize,
                                   width: 24.adaptSize,
-                                  margin: EdgeInsets.only(top: 6.v, bottom: 8.v)),
+                                  margin:
+                                      EdgeInsets.only(top: 6.v, bottom: 8.v)),
                               Padding(
                                   padding: EdgeInsets.only(left: 11.h),
                                   child: Column(
@@ -194,11 +209,12 @@ class ProfilePage extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text("msg_lab_tests_and_doctor".tr,
-                                            style: theme.textTheme.bodyLarge),
+                                            style: CustomTextStyles
+                                                .bodyLargeBluegray90018),
                                         SizedBox(height: 3.v),
                                         Text("msg_order_history_and".tr,
                                             style:
-                                                CustomTextStyles.bodyMedium14_1)
+                                                CustomTextStyles.bodyMedium14)
                                       ])),
                               Spacer(),
                               CustomImageView(
@@ -206,9 +222,11 @@ class ProfilePage extends StatelessWidget {
                                   height: 20.adaptSize,
                                   width: 20.adaptSize,
                                   onTap: () {
-                                    Get.toNamed(AppRoutes.labTestsAndDoctorConsultantScreen);
+                                    Get.toNamed(AppRoutes
+                                        .labTestsAndDoctorConsultantScreen);
                                   },
-                                  margin: EdgeInsets.only(top: 8.v, bottom: 10.v))
+                                  margin:
+                                      EdgeInsets.only(top: 8.v, bottom: 10.v))
                             ]),
                         Padding(
                             padding: EdgeInsets.only(top: 13.v),
@@ -226,10 +244,11 @@ class ProfilePage extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text("msg_all_health_records".tr,
-                                        style: theme.textTheme.bodyLarge),
+                                        style: CustomTextStyles
+                                            .bodyLargeBluegray90018),
                                     SizedBox(height: 3.v),
                                     Text("msg_reports_prescription_bills".tr,
-                                        style: CustomTextStyles.bodyMedium14_1)
+                                        style: CustomTextStyles.bodyMedium14)
                                   ])),
                           Spacer(),
                           CustomImageView(
@@ -237,12 +256,13 @@ class ProfilePage extends StatelessWidget {
                               height: 20.adaptSize,
                               width: 20.adaptSize,
                               onTap: () {
-                                    Get.toNamed(AppRoutes.allHealthRecordScreen);
-                                  },
+                                Get.toNamed(AppRoutes.allHealthRecordScreen);
+                              },
                               margin: EdgeInsets.only(top: 8.v, bottom: 10.v))
                         ]),
                         SizedBox(height: 21.v),
-                        Text("lbl_more".tr, style: theme.textTheme.bodyLarge),
+                        Text("lbl_more".tr,
+                            style: CustomTextStyles.bodyLargeBluegray90018),
                         SizedBox(height: 16.v),
                         Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -251,7 +271,8 @@ class ProfilePage extends StatelessWidget {
                                   svgPath: ImageConstant.imgTablermedicinesyrup,
                                   height: 24.adaptSize,
                                   width: 24.adaptSize,
-                                  margin: EdgeInsets.only(top: 4.v, bottom: 8.v)),
+                                  margin:
+                                      EdgeInsets.only(top: 4.v, bottom: 8.v)),
                               Padding(
                                   padding: EdgeInsets.only(left: 11.h),
                                   child: Column(
@@ -259,18 +280,20 @@ class ProfilePage extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text("lbl_help".tr,
-                                            style: theme.textTheme.bodyLarge),
+                                            style: CustomTextStyles
+                                                .bodyLargeBluegray90018),
                                         SizedBox(height: 1.v),
                                         Text("msg_faqs_get_help_or".tr,
                                             style:
-                                                CustomTextStyles.bodyMedium14_1)
+                                                CustomTextStyles.bodyMedium14)
                                       ])),
                               Spacer(),
                               CustomImageView(
                                   svgPath: ImageConstant.imgArrowright,
                                   height: 20.adaptSize,
                                   width: 20.adaptSize,
-                                  margin: EdgeInsets.only(top: 6.v, bottom: 10.v))
+                                  margin:
+                                      EdgeInsets.only(top: 6.v, bottom: 10.v))
                             ]),
                         Padding(
                             padding: EdgeInsets.only(top: 13.v),
@@ -283,7 +306,8 @@ class ProfilePage extends StatelessWidget {
                                   svgPath: ImageConstant.imgLastethoscope,
                                   height: 24.adaptSize,
                                   width: 24.adaptSize,
-                                  margin: EdgeInsets.only(top: 6.v, bottom: 8.v)),
+                                  margin:
+                                      EdgeInsets.only(top: 6.v, bottom: 8.v)),
                               Padding(
                                   padding: EdgeInsets.only(left: 11.h),
                                   child: Column(
@@ -291,18 +315,20 @@ class ProfilePage extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text("lbl_address_book".tr,
-                                            style: theme.textTheme.bodyLarge),
+                                            style: CustomTextStyles
+                                                .bodyLargeBluegray90018),
                                         SizedBox(height: 3.v),
                                         Text("msg_edit_add_and_manage".tr,
                                             style:
-                                                CustomTextStyles.bodyMedium14_1)
+                                                CustomTextStyles.bodyMedium14)
                                       ])),
                               Spacer(),
                               CustomImageView(
                                   svgPath: ImageConstant.imgArrowright,
                                   height: 20.adaptSize,
                                   width: 20.adaptSize,
-                                  margin: EdgeInsets.only(top: 8.v, bottom: 10.v))
+                                  margin:
+                                      EdgeInsets.only(top: 8.v, bottom: 10.v))
                             ]),
                         CustomElevatedButton(
                             text: "lbl_logout".tr,

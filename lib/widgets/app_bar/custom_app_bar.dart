@@ -3,6 +3,14 @@ import 'package:sahil_s_application2/core/app_export.dart';
 
 // ignore: must_be_immutable
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  final double? height;
+  final Style? styleType;
+  final double? leadingWidth;
+  final Widget? leading;
+  final Widget? title;
+  final bool? centerTitle;
+  final List<Widget>? actions;
+  final double? elevation;
   CustomAppBar({
     Key? key,
     this.height,
@@ -11,24 +19,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.leading,
     this.title,
     this.centerTitle,
-    this.actions,
-  }) : super(
-          key: key,
-        );
+    this.actions, this.elevation
+  });
 
-  final double? height;
-
-  final Style? styleType;
-
-  final double? leadingWidth;
-
-  final Widget? leading;
-
-  final Widget? title;
-
-  final bool? centerTitle;
-
-  final List<Widget>? actions;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +31,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         Padding(
           padding: const EdgeInsets.only(left: 10,right:20),
           child: AppBar(
-            elevation: 0,
+            elevation:elevation?? 0,
             toolbarHeight: height ?? 54.v,
             automaticallyImplyLeading: false,
             backgroundColor: Colors.transparent,

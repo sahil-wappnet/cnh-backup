@@ -32,10 +32,6 @@ import 'package:sahil_s_application2/presentation/splashscreen_screen/splashscre
 import 'package:sahil_s_application2/presentation/splashscreen_screen/binding/splashscreen_binding.dart';
 import 'package:sahil_s_application2/presentation/onboarding_screenone_screen/onboarding_screenone_screen.dart';
 import 'package:sahil_s_application2/presentation/onboarding_screenone_screen/binding/onboarding_screenone_binding.dart';
-import 'package:sahil_s_application2/presentation/onboarding_screentwo_screen/onboarding_screentwo_screen.dart';
-import 'package:sahil_s_application2/presentation/onboarding_screentwo_screen/binding/onboarding_screentwo_binding.dart';
-import 'package:sahil_s_application2/presentation/onboarding_screenthree_screen/onboarding_screenthree_screen.dart';
-import 'package:sahil_s_application2/presentation/onboarding_screenthree_screen/binding/onboarding_screenthree_binding.dart';
 import 'package:sahil_s_application2/presentation/sign_up_screen/sign_up_screen.dart';
 import 'package:sahil_s_application2/presentation/sign_up_screen/binding/sign_up_binding.dart';
 import 'package:sahil_s_application2/presentation/sign_in_screen/sign_in_screen.dart';
@@ -129,7 +125,7 @@ class AppRoutes {
   static const String addAppointmentPageScreen = '/add_appointment_page_screen';
 
   static const String medicineOrdersScreen = '/medicine_orders_screen';
-  
+
   static const String bookedAppointmentScreen = '/booked_appointment_screen';
 
   static const String chatsPage = '/chats_page';
@@ -143,7 +139,7 @@ class AppRoutes {
   static const String queueMoveInQueueTabContainerScreen =
       '/queue_move_in_queue_tab_container_screen';
 
-   static const String labTestsAndDoctorConsultantScreen =
+  static const String labTestsAndDoctorConsultantScreen =
       '/lab_tests_and_doctor_consultant_screen';
 
   static const String allHealthRecordScreen = '/all_health_record_screen';
@@ -188,7 +184,7 @@ class AppRoutes {
   static const String bookAppointmentScreen = '/book_appointment_screen';
 
   static const String paymentPage = '/payment_page';
-  
+
   static const String paymentSuccessPage = '/payment_success_page';
 
   static const String paymentPageTabContainerScreen =
@@ -363,31 +359,10 @@ class AppRoutes {
       ],
     ),
     GetPage(
-      name: splashscreenScreen,
-      page: () => SplashscreenScreen(),
-      bindings: [
-        SplashscreenBinding(),
-      ],
-    ),
-    GetPage(
       name: onboardingScreenoneScreen,
       page: () => OnboardingScreenoneScreen(),
       bindings: [
         OnboardingScreenoneBinding(),
-      ],
-    ),
-    GetPage(
-      name: onboardingScreentwoScreen,
-      page: () => OnboardingScreentwoScreen(),
-      bindings: [
-        OnboardingScreentwoBinding(),
-      ],
-    ),
-    GetPage(
-      name: onboardingScreenthreeScreen,
-      page: () => OnboardingScreenthreeScreen(),
-      bindings: [
-        OnboardingScreenthreeBinding(),
       ],
     ),
     GetPage(
@@ -481,7 +456,6 @@ class AppRoutes {
         HomeMedicationNewTabContainerBinding(),
       ],
     ),
-    
     GetPage(
       name: addMedicineScreen,
       page: () => AddMedicineScreen(),

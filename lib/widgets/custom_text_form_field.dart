@@ -25,13 +25,13 @@ class CustomTextFormField extends StatelessWidget {
     this.borderDecoration,
     this.fillColor,
     this.filled = false,
-    this.validator,
+    this.validator, this.textCapitalization,
   }) : super(
           key: key,
         );
 
   final Alignment? alignment;
-
+  final TextCapitalization? textCapitalization;
   final double? width;
 
   final EdgeInsetsGeometry? margin;
@@ -88,6 +88,8 @@ class CustomTextFormField extends StatelessWidget {
         width: width ?? double.maxFinite,
         margin: margin,
         child: TextFormField(
+          
+          textCapitalization: textCapitalization??TextCapitalization.none,
           controller: controller,
           focusNode: focusNode ?? FocusNode(),
           autofocus: autofocus!,
@@ -101,6 +103,7 @@ class CustomTextFormField extends StatelessWidget {
         ),
       );
   InputDecoration get decoration => InputDecoration(
+    
         hintText: hintText ?? "",
         hintStyle: hintStyle ?? CustomTextStyles.bodyMediumGray500,
         prefixIcon: prefix,

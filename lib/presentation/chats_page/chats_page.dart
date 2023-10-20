@@ -94,58 +94,63 @@ class ChatsPage extends StatelessWidget {
                                     horizontal: 10.v, vertical: 10.v),
                                 child: ListView.builder(
                                     itemCount: 5,
-                                    shrinkWrap: true,
+                                    shrinkWrap: true,     
                                     padding:
-                                        EdgeInsets.symmetric(vertical: 0.v),
+                                        EdgeInsets.symmetric(vertical: 5.v),
                                     itemBuilder: (context, index) {
-                                      return Padding(
-                                        padding: EdgeInsets.symmetric(
-                                            horizontal: 7.v, vertical: 5.v),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            CustomImageView(
-                                              imagePath: ImageConstant
-                                                  .placeholderImage,
-                                              height: 50.adaptSize,
-                                              width: 50.adaptSize,
-                                              radius: BorderRadius.circular(
-                                                17.h,
+                                      return InkWell(onTap: () {
+                                        Get.toNamed(AppRoutes.messageScreen);
+                                      },
+                                        child: Padding(
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: 7.v, vertical: 8.v),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              CustomImageView(
+                                                imagePath: ImageConstant
+                                                    .placeholderImage,
+                                                height: 50.adaptSize,
+                                                width: 50.adaptSize,
+                                                radius: BorderRadius.circular(
+                                                  17.h,
+                                                ),
                                               ),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  EdgeInsets.only(left: 11.h),
-                                              child: Column(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    "lbl_dr_bose".tr,
-                                                    overflow:
-                                                        TextOverflow.ellipsis,
-                                                    style: CustomTextStyles
-                                                        .bodyMediumBluegray900_1,
-                                                  ),
-                                                  SizedBox(height: 2.v),
-                                                  Text(
-                                                    'lbl_okay_will_do'.tr,
-                                                    overflow:
-                                                        TextOverflow.ellipsis,
-                                                    style: theme
-                                                        .textTheme.bodySmall,
-                                                  ),
-                                                ],
+                                              Padding(
+                                                padding:
+                                                    EdgeInsets.only(left: 11.h),
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      "lbl_dr_bose".tr,
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      style: CustomTextStyles
+                                                          .bodyMediumBluegray900_1,
+                                                    ),
+                                                    SizedBox(height: 2.v),
+                                                    Text(
+                                                      'lbl_okay_will_do'.tr,
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      style: theme
+                                                          .textTheme.bodySmall,
+                                                    ),
+                                                    
+                                                  ],
+                                                ),
                                               ),
-                                            ),
-                                            Spacer(),
-                                            Text(
-                                              'lbl_10_00'.tr,
-                                              overflow: TextOverflow.ellipsis,
-                                              style: theme.textTheme.bodySmall,
-                                            ),
-                                          ],
+                                              Spacer(),
+                                              Text(
+                                                'lbl_10_00'.tr,
+                                                overflow: TextOverflow.ellipsis,
+                                                style: theme.textTheme.bodySmall,
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       );
                                     })),
@@ -156,11 +161,11 @@ class ChatsPage extends StatelessWidget {
                                     itemCount: 5,
                                     shrinkWrap: true,
                                     padding:
-                                        EdgeInsets.symmetric(vertical: 0.v),
+                                        EdgeInsets.symmetric(vertical: 5.v),
                                     itemBuilder: (context, index) {
                                       return Padding(
                                         padding: EdgeInsets.symmetric(
-                                            horizontal: 7.v, vertical: 5.v),
+                                            horizontal: 7.v, vertical: 8.v),
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
@@ -208,8 +213,8 @@ class ChatsPage extends StatelessWidget {
                                           ],
                                         ),
                                       );
-                                    })),
-                          ]))
+                                    },),),
+                          ],),),
                 ],
               ),
             ),

@@ -19,7 +19,7 @@ class ImageConstant {
 
   static String imgCarbonvideo = '$imagePath/img_carbonvideo.svg';
 
-  static String imgCheckmark = '$imagePath/img_checkmark.svg';
+  // static String imgCheckmark = '$imagePath/right_tick.png';
 
   static String imgFluentattach20filled =
       '$imagePath/img_fluentattach20filled.svg';
@@ -164,6 +164,8 @@ class ImageConstant {
 
   static String placeholderImage = '$imagePath/placeholder_image.png';
 
+  static String imgCheckmark = '$imagePath/right_tick.png';
+
   static String imgTablermedicinesyrup =
       '$imagePath/img_tablermedicinesyrup.svg';
 
@@ -212,4 +214,10 @@ class ImageConstant {
   static String imgCarbonlocation = '$imagePath/img_carbonlocation.svg';
 
   static String imageNotFound = 'assets/images/image_not_found.png';
+
+  static String onbording1image = '$imagePath/onborading1.png';
+
+  static String onbording2image = '$imagePath/onborading2.svg';
+
+  static String onbording3image = '$imagePath/onborading3.svg';
 }

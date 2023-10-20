@@ -1,4 +1,3 @@
-
 import 'controller/doctors_details_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:sahil_s_application2/core/app_export.dart';
@@ -44,54 +43,51 @@ class DoctorsDetailsScreen extends GetWidget<DoctorsDetailsController> {
                     height: 60.adaptSize,
                     width: 60.adaptSize,
                     radius: BorderRadius.circular(30.h)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10.v),
-                      child: Column(
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.v),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("lbl_dr_ruhi".tr,
-                                  style:
-                                      CustomTextStyles.bodyLargeBluegray900_1),
-                              CustomElevatedButton(
-                                  height: 18.v,
-                                  width: 40.h,
-                                  text: "lbl_4_7".tr,
-                                  margin: EdgeInsets.only(left: 10.v),
-                                  leftIcon: Container(
-                                      margin: EdgeInsets.only(right: 3.h),
-                                      child: CustomImageView(
-                                          svgPath: ImageConstant.imgStar)),
-                                  buttonStyle: CustomButtonStyles.fillPrimary,
-                                  buttonTextStyle:
-                                      CustomTextStyles.bodySmallWhiteA700),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5.v,
-                          ),
-                          Text("msg_heart_specialist".tr,
-                              style: theme.textTheme.bodySmall),
+                          Text("lbl_dr_ruhi".tr,
+                              style: CustomTextStyles.bodyLargeBluegray900_1),
+                          CustomElevatedButton(
+                              height: 18.v,
+                              width: 40.h,
+                              text: "lbl_4_7".tr,
+                              margin: EdgeInsets.only(left: 10.v),
+                              leftIcon: Container(
+                                  margin: EdgeInsets.only(right: 3.h),
+                                  child: CustomImageView(
+                                      svgPath: ImageConstant.imgStar)),
+                              buttonStyle: CustomButtonStyles.fillPrimary,
+                              buttonTextStyle:
+                                  CustomTextStyles.bodySmallWhiteA700),
                         ],
                       ),
-                    ),
-                    CustomImageView(
-                        svgPath: ImageConstant.imgVolume,
-                        height: 20.adaptSize,
-                        width: 20.adaptSize,
-                        margin: EdgeInsets.symmetric(vertical: 20.v))
-                  ],
+                      SizedBox(
+                        height: 5.v,
+                      ),
+                      Text("msg_heart_specialist".tr,
+                          style: theme.textTheme.bodySmall),
+                    ],
+                  ),
                 ),
+                Spacer(),
+                CustomImageView(
+                    svgPath: ImageConstant.imgVolume,
+                    height: 20.adaptSize,
+                    width: 20.adaptSize,
+                    margin: EdgeInsets.symmetric(vertical: 20.v)),
+                SizedBox(
+                  width: 12.h,
+                )
               ],
             ),
-
             SizedBox(height: 20.v),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -251,7 +247,6 @@ class DoctorsDetailsScreen extends GetWidget<DoctorsDetailsController> {
                               style: theme.textTheme.bodySmall))
                     ])),
             SizedBox(height: 15.v),
-
             CustomElevatedButton(
               text: "lbl_book_now".tr,
               onTap: () {
